@@ -10,11 +10,40 @@ body {
     background-color: #0f0f0f;
     color: #f0f0f0;
     line-height: 1.6;
+    padding-top: 60px; /* Give space for fixed navbar */
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+/* Fixed Top Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background: #00d9ff;
+    color: #0f0f0f;
 }
 
 /* Hero Section */
@@ -26,29 +55,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 2rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav ul li a:hover {
-    color: #00d9ff;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #00d9ff;
 }
 
 .hero-content h1 {

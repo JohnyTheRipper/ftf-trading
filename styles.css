@@ -1,29 +1,29 @@
 /* Smooth scroll */
 html {
     scroll-behavior: smooth;
-}
-
-/* Reset and base styles */
-* {
+  }
+  
+  /* Reset and base styles */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #0f0f0f;
     color: #f0f0f0;
     line-height: 1.6;
-}
-
-a {
+  }
+  
+  a {
     color: inherit;
     text-decoration: none;
-}
-
-/* Navbar */
-.navbar {
+  }
+  
+  /* Navbar */
+  .navbar {
     background: linear-gradient(to right, #0d0d0d, #1a1a1a);
     position: fixed;
     top: 0;
@@ -32,152 +32,171 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-}
-
-.logo a {
+    padding: 12px 30px;
+    border-bottom: 1px solid #222;
+  }
+  
+  .logo a {
     font-size: 24px;
     font-weight: bold;
     color: #00d9ff;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: flex;
     gap: 20px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: #f2f2f2;
     padding: 10px 16px;
-    font-size: 17px;
+    font-size: 16px;
     transition: background 0.3s, color 0.3s;
-}
-
-.nav-links a:hover {
+    border-radius: 5px;
+  }
+  
+  .nav-links a:hover {
     background: #00d9ff;
     color: #0f0f0f;
-    border-radius: 5px;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(to right, #0d0d0d, #1a1a1a);
-    padding: 2rem;
-    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, #0d0d0d, #2c5364);
+    padding: 3rem 1rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 70px; /* Adjusted for fixed navbar */
-}
-
-.hero-content h1 {
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+  }
+  
+  .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
-
-.hero-content p {
+  }
+  
+  .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-}
-
-.btn {
+  }
+  
+  .btn {
     background: #00d9ff;
     padding: 0.75rem 2rem;
     border-radius: 5px;
     color: #0f0f0f;
     font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn:hover {
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .btn:hover {
     background: #009ec3;
-}
-
-/* Sections */
-section {
+  }
+  
+  .signin-link {
+    color: #00d9ff;
+    text-decoration: underline;
+  }
+  
+  .signin-link:hover {
+    color: #00b0cc;
+  }
+  
+  /* Sections */
+  section {
     padding: 4rem 2rem;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-}
-
-.about, .enroll {
+  }
+  
+  section:not(.hero):not(.contact) {
+    border-top: 2px solid #222;
+  }
+  
+  .about,
+  .enroll,
+  .contact {
     background: #1a1a1a;
     margin-top: 2rem;
     border-radius: 10px;
     padding: 3rem 2rem;
-}
-
-.modules {
+  }
+  
+  .about p {
+    margin-top: 1rem;
+    line-height: 1.8;
+  }
+  
+  /* Modules Section */
+  .modules {
     margin-top: 2rem;
-}
-
-.module-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+  }
+  
+  .modules ul {
+    list-style: none;
     margin-top: 2rem;
-}
-
-.module {
+    padding: 0;
+  }
+  
+  .modules li {
     background: #262626;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
     transition: background 0.3s;
-}
-
-.module:hover {
+  }
+  
+  .modules li:hover {
     background: #333;
-}
-
-
-/* Contact */
-.contact {
-    background: #1a1a1a;
-    margin-top: 2rem;
-    border-radius: 10px;
-    padding: 3rem 2rem;
-}
-
-.contact-form {
+  }
+  
+  /* Contact */
+  .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     max-width: 600px;
     margin: 2rem auto 0;
-}
-
-.contact-form input,
-.contact-form textarea {
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     background-color: #2c2c2c;
     color: #fff;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
     color: #aaa;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
     outline: 2px solid #00d9ff;
-}
-
-.contact-form button.btn {
+  }
+  
+  .contact-form button.btn {
     width: fit-content;
     align-self: center;
-}
-
-/* Footer */
-footer {
+  }
+  
+  /* Footer */
+  footer {
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
     font-size: 0.9rem;
     color: #555;
-}
+    border-top: 1px solid #222;
+    margin-top: 3rem;
+  }
+  

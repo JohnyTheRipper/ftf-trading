@@ -40,6 +40,7 @@ a {
 
 .nav-links {
     display: flex;
+    align-items: Right;
 }
 
 .nav-links a {
